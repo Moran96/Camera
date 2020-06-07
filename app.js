@@ -1,4 +1,4 @@
-new Vue({
+var app = new Vue({
     el: '#app',
     data: {
         cameraList: [],
@@ -32,9 +32,10 @@ new Vue({
         getDevices () {
             return new Promise((resolve, reject) => {
                 if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {
-                    console.log("不支持 enumerateDevices() .")
+                    window.alert("不支持 mediaDevices.enumerateDevices()")
                 }
                 navigator.mediaDevices.enumerateDevices().then(devices => {
+                    console.log(devices)
                     this.cameraList = []
                     devices.forEach((device, index) => {
                         if (device.kind && device.kind === 'videoinput') {

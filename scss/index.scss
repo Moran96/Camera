@@ -1,0 +1,22 @@
+.video-list {
+    .video-container {
+        position: relative;
+        z-index: 1;
+        padding: 4px;
+        display: inline-block;
+        vertical-align: top;
+        background-color: #eee;
+        .btns {
+            text-align: center;
+        }
+        .name {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            z-index: 2;
+            font-size: 24px;
+            white-space: nowrap;
+            color: red;
+        }
+    }
+}

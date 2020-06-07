@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>摄像头拍照</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="video-list">
+            <div class="video-container">
+                <video id="video0" width="480" height="320" controls></video>
+                <div class="btns"><button onclick="takePhoto(0)">拍照</button></div>
+                <div class="name" id="name0"></div>
+            </div>
+            <div class="video-container">
+                <video id="video1" width="480" height="320" controls></video>
+                <div class="btns"><button onclick="takePhoto(1)">拍照</button></div>
+                <div class="name" id="name1"></div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="canvas" width="480" height="320"></canvas>
+    <script src="./app.js"></script>
+</body>
+
+</html>
